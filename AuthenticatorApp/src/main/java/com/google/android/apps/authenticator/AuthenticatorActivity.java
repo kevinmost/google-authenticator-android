@@ -800,14 +800,7 @@ public class AuthenticatorActivity extends TestableActivity {
   }
 
   private void scanBarcode() {
-    Intent intentScan = new Intent("com.google.zxing.client.android.SCAN");
-    intentScan.putExtra("SCAN_MODE", "QR_CODE_MODE");
-    intentScan.putExtra("SAVE_HISTORY", false);
-    try {
-      startActivityForResult(intentScan, SCAN_REQUEST);
-    } catch (ActivityNotFoundException error) {
-      showDialog(Utilities.DOWNLOAD_DIALOG);
-    }
+    startActivityForResult(new Intent(this, ScanCodeActivity.class), SCAN_REQUEST);
   }
 
   public static Intent getLaunchIntentActionScanBarcode(Context context) {

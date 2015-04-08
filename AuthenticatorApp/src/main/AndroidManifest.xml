@@ -18,10 +18,11 @@
           package="com.google.android.apps.authenticator2"
           android:versionCode="21" android:versionName="2.21">
 
-  <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="14" />
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="21" />
 
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.CAMERA" />
 
   <!--
   NOTE: android:allowBackup is set to false below to prevent the key material from being extracted
@@ -53,6 +54,8 @@
 
     <activity android:name="com.google.android.apps.authenticator.AddOtherAccountActivity"
               android:label="@string/add_account_menu_item" />
+
+    <activity android:name="com.google.android.apps.authenticator.ScanCodeActivity"/>
 
     <activity android:name="com.google.android.apps.authenticator.EnterKeyActivity"
               android:label="@string/enter_key_title" />

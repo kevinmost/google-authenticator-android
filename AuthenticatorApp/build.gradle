@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 14
+    compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.google.android.apps.authenticator2"
-        minSdkVersion 7
-        targetSdkVersion 14
+        minSdkVersion 9
+        targetSdkVersion 21
 
         testApplicationId "com.google.android.apps.authenticator2.tests"
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
@@ -28,5 +28,7 @@ android {
         androidTestCompile "org.mockito:mockito-core:1.9.5"
         androidTestCompile "com.google.dexmaker:dexmaker:1.2"
         androidTestCompile "com.google.dexmaker:dexmaker-mockito:1.2"
+
+      compile "me.dm7.barcodescanner:zxing:1.6.3"
     }
 }
